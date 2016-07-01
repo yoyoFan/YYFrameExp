@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ErrorTipsView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PyZ-4q-sR6">
+                    <rect key="frame" x="8" y="139" width="304" height="290"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error_tips_img" translatesAutoresizingMaskIntoConstraints="NO" id="DkG-Kr-JPo">
+                            <rect key="frame" x="99" y="65" width="107" height="107"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="107" id="aip-r9-AZb"/>
+                                <constraint firstAttribute="width" constant="107" id="fwK-Ya-SSU"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error_tips" translatesAutoresizingMaskIntoConstraints="NO" id="6eE-9e-EVt">
+                            <rect key="frame" x="182" y="30" width="58" height="54"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="54" id="9jl-od-RjV"/>
+                                <constraint firstAttribute="width" constant="58" id="FEQ-Iy-9p8"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="喵~~" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydt-vG-o1E">
+                            <rect key="frame" x="134" y="189" width="36" height="20"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" tag="9999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlm-8m-2ov">
+                            <rect key="frame" x="92" y="235" width="120" height="40"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="Bnn-lp-NV4"/>
+                                <constraint firstAttribute="height" constant="40" id="BoP-pg-ctH"/>
+                            </constraints>
+                            <state key="normal" title="去添加">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="Ydt-vG-o1E" secondAttribute="centerX" id="B6V-8x-gk3"/>
+                        <constraint firstAttribute="centerY" secondItem="6eE-9e-EVt" secondAttribute="centerY" constant="88" id="H12-RP-YeS"/>
+                        <constraint firstAttribute="width" constant="304" id="X95-t4-Jcx"/>
+                        <constraint firstItem="Dlm-8m-2ov" firstAttribute="top" secondItem="Ydt-vG-o1E" secondAttribute="bottom" constant="26" id="XJS-cN-fa2"/>
+                        <constraint firstAttribute="centerY" secondItem="DkG-Kr-JPo" secondAttribute="centerY" constant="26.5" id="ZHN-SP-lct"/>
+                        <constraint firstAttribute="height" constant="290" id="hai-zn-wXr"/>
+                        <constraint firstItem="Dlm-8m-2ov" firstAttribute="leading" secondItem="PyZ-4q-sR6" secondAttribute="leadingMargin" constant="84" id="iMv-qe-h2D"/>
+                        <constraint firstAttribute="centerX" secondItem="6eE-9e-EVt" secondAttribute="centerX" constant="-59" id="iOj-tq-RF0"/>
+                        <constraint firstAttribute="trailingMargin" secondItem="Dlm-8m-2ov" secondAttribute="trailing" constant="84" id="oYq-WK-xCR"/>
+                        <constraint firstAttribute="centerX" secondItem="DkG-Kr-JPo" secondAttribute="centerX" id="rbH-Kh-dyM"/>
+                        <constraint firstItem="Ydt-vG-o1E" firstAttribute="top" secondItem="DkG-Kr-JPo" secondAttribute="bottom" constant="17" id="sND-XT-YJq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="PyZ-4q-sR6" secondAttribute="centerY" id="6vy-wx-vne"/>
+                <constraint firstAttribute="centerX" secondItem="PyZ-4q-sR6" secondAttribute="centerX" id="Jfc-E4-mCm"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addBtn" destination="Dlm-8m-2ov" id="dNq-OJ-cG0"/>
+                <outlet property="tipsLB" destination="Ydt-vG-o1E" id="PFR-nN-9gu"/>
+                <outlet property="tipsView" destination="PyZ-4q-sR6" id="AC0-he-OU8"/>
+                <outlet property="tips_imgView" destination="DkG-Kr-JPo" id="Nel-Ei-SyQ"/>
+                <outlet property="tips_literal_imgView" destination="6eE-9e-EVt" id="tXF-yV-Ak3"/>
+            </connections>
+            <point key="canvasLocation" x="276" y="353"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="error_tips" width="58" height="55"/>
+        <image name="error_tips_img" width="109" height="103"/>
+    </resources>
+</document>

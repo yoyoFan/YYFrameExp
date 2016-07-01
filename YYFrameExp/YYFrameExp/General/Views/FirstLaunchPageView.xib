@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FirstLaunchPageView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAC-5L-wP2">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="MSD-bQ-Pi9"/>
+                    </connections>
+                </scrollView>
+                <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Vj6-by-g1V">
+                    <rect key="frame" x="140" y="459" width="39" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="WuF-1G-8mt"/>
+                    </constraints>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="jAC-5L-wP2" secondAttribute="trailing" id="44r-7d-zRK"/>
+                <constraint firstItem="Vj6-by-g1V" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="140" id="MVc-8G-XfN"/>
+                <constraint firstAttribute="bottom" secondItem="jAC-5L-wP2" secondAttribute="bottom" id="POH-dB-lzV"/>
+                <constraint firstAttribute="bottom" secondItem="Vj6-by-g1V" secondAttribute="bottom" constant="27" id="SAl-81-qad"/>
+                <constraint firstItem="jAC-5L-wP2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="euw-LB-ze7"/>
+                <constraint firstAttribute="trailing" secondItem="Vj6-by-g1V" secondAttribute="trailing" constant="141" id="njB-Qa-VHb"/>
+                <constraint firstItem="jAC-5L-wP2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qUb-ay-XrP"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="backScrollView" destination="jAC-5L-wP2" id="mLw-Yl-mAM"/>
+                <outlet property="pageCtl" destination="Vj6-by-g1V" id="y2a-96-NoR"/>
+            </connections>
+            <point key="canvasLocation" x="280" y="362"/>
+        </view>
+    </objects>
+</document>

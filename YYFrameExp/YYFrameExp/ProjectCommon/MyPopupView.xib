@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="vPV-z3-QsK" customClass="MyPopupView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBw-te-1Zd">
+                    <rect key="frame" x="30" y="201" width="260" height="166"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="popupBk.png" translatesAutoresizingMaskIntoConstraints="NO" id="ruh-as-zl6">
+                            <rect key="frame" x="0.0" y="0.0" width="260" height="166"/>
+                            <animations/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="标题" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2c-XI-iiz">
+                            <rect key="frame" x="37" y="8" width="186" height="21"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.89411765340000005" green="0.29019609089999998" blue="0.29019609089999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zto-Ny-2pu">
+                            <rect key="frame" x="8" y="128" width="112" height="30"/>
+                            <animations/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="leftButtonTaped:" destination="vPV-z3-QsK" eventType="touchUpInside" id="Gtk-gj-fHA"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0x-gw-2YG">
+                            <rect key="frame" x="141" y="128" width="111" height="30"/>
+                            <animations/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="rightButtonTaped:" destination="vPV-z3-QsK" eventType="touchUpInside" id="5wJ-eu-qr4"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbd-GB-38f">
+                            <rect key="frame" x="220" y="0.0" width="34" height="34"/>
+                            <animations/>
+                            <state key="normal" image="popupClose.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="closeTaped:" destination="vPV-z3-QsK" eventType="touchUpInside" id="etG-qC-FBH"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="内容" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Em-g2-244">
+                            <rect key="frame" x="27" y="37" width="206" height="83"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.1411764771" green="0.1411764771" blue="0.1411764771" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="260" id="NBO-Ss-qiq"/>
+                        <constraint firstAttribute="height" constant="166" id="XEB-iD-w7z"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="deviceRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="bBw-te-1Zd" secondAttribute="centerX" id="EhQ-wB-HCr"/>
+                <constraint firstAttribute="centerY" secondItem="bBw-te-1Zd" secondAttribute="centerY" id="M4D-Pi-VIf"/>
+            </constraints>
+            <connections>
+                <outlet property="confirmView" destination="bBw-te-1Zd" id="EaP-5p-r00"/>
+                <outlet property="contentLabel" destination="9Em-g2-244" id="U7Q-Qd-oYr"/>
+                <outlet property="leftButton" destination="Zto-Ny-2pu" id="9Nd-nX-TJR"/>
+                <outlet property="rightButton" destination="v0x-gw-2YG" id="Csb-bi-W2b"/>
+                <outlet property="titleLabel" destination="Q2c-XI-iiz" id="9lK-ln-tQv"/>
+            </connections>
+            <point key="canvasLocation" x="269" y="473"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="popupBk.png" width="260" height="166"/>
+        <image name="popupClose.png" width="14" height="14"/>
+    </resources>
+</document>

@@ -1,0 +1,123 @@
+function jscall_execute(url)
+{
+    var iframe = document.createElement("IFRAME");
+    iframe.setAttribute("src", url);
+    document.documentElement.appendChild(iframe);
+    iframe.parentNode.removeChild(iframe);
+    iframe = null;
+}
+
+function jscall(functionName){
+	// for (var i = 0; i < arguments.length; i++) {
+	// 	alert(arguments[i]);
+	// };
+	// alert(functionName);
+	var url = "jscall://"+String(arguments[0]);
+	for (var i = 1; i < arguments.length; i++) {
+        var cleanArg = String(arguments[i]);
+        // conflict with url address.
+        //var cleanArg = cleanArg.replace(/\/\/[^\n]*/g, ""); //删除单行注释
+        //var cleanArg = cleanArg.replace(/\/\*(\s|.)*?\*\//g, ""); //删除多行注释
+		url += "#p#"+cleanArg;
+	};
+    jscall_execute(url);
+};
+
+var gmall = {
+    navigation:{
+        push:function(url, paramJson){
+            jscall("navPush", url, paramJson);
+        },
+        setRightBarItem:function(iconName, callback) {
+            jscall("navSetRightBarItem", iconName, callback);
+        },
+    },
+    setTitle:function(title) {
+        jscall("setTitle", title);
+    },
+    msgSend:function(functionName, params){
+        jscall(functionName, params);
+    },
+    /*
+    @param paramJson params in json
+    @param successedCallback void onSuccess(result){}，若使用代码块，代码块的上下文环境会丢失，在代码块中无法调用局部作用域的对象。
+    @param failedCallback void onFailed(errorDescription){}
+     */
+    asyncRequest:function(paramJson, successedCallback, failedCallback){
+        jscall("asyncRequest", paramJson, successedCallback, failedCallback);
+    },
+    /*
+    @param callback void callback(infoString){}
+     */
+    getUserInfo:function(keypath, callback){
+        jscall("getUserInfo", keypath, callback);
+    },
+    changeBackColor:function(r,g,b) {
+        jscall("changebackcolor", r, g, b);
+    },
+    share:function (objId, sourceId, title, content, url, iconUrl){
+        jscall("SocialShare", objId, sourceId, title, content, url, iconUrl);
+    },
+    syncScore:function (score){
+        jscall("AddScore", score);
+    },
+    goPage:function (pageId, paramStr, needRefresh){
+        jscall("goPage", pageId, paramStr, needRefresh);
+    },
+    back:function (backTo){
+        jscall("back", backTo);
+    },
+    showProgressDialog:function(msg){
+        jscall("showProgressDialog", msg);
+    },
+    updateProgressDialog:function(msg){
+        jscall("updateProgressDialog", msg);
+    },
+    closeProgressDialog:function(){
+        jscall("closeProgressDialog");
+    },
+    tip:function(msg){
+        jscall("tip", msg);
+    },
+    taskFinished:function(msg){
+        jscall("taskFinished");
+    },
+    datePicker:function(id, fun){
+        jscall("datepicker", id, fun);
+    },
+    loginToUrl:function(url){
+        jscall("loginToUrl", url);
+    },
+    confirm:function(title, msg, leftTxt, rightTxt, fun){
+        msg = msg.replace(/(\r\n|\n|\r)/g, "<br>");
+        jscall("confirm", title, msg, leftTxt, rightTxt, fun);
+    },
+    registerBackTapedFun:function(funName){
+        jscall("registerBackTapedFun", funName);
+    },
+    cameraCallback:function(cameraCallback) {
+        jscall("camera", cameraCallback);
+    },
+    openQR:function(callback) {
+        jscall("openQR", callback);
+    },
+    showAppleStatement:function(callback) {
+        jscall("showAppleStatement", callback);
+    },
+    getSecret:function(str, callback) {
+        jscall("getSecret", str, callback);
+    },
+    reload:function(callback) {
+        jscall("reload", callback);
+    },
+    openWx:function(callback) {
+     jscall("openWx", callback);
+    }
+};
+window.gmall = gmall;
+var doc = document;
+var global = this;
+var readyEvent = doc.createEvent('Events');
+readyEvent.initEvent('GmallReady');
+readyEvent.gmall = gmall;
+doc.dispatchEvent(readyEvent);

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="CommicView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <animations/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="xvm-FM-wbV" appends="YES" id="whv-2t-Nuh"/>
+                    </connections>
+                </scrollView>
+                <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="4">
+                    <rect key="frame" x="141" y="522" width="38" height="36"/>
+                    <animations/>
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="pageChanged:" destination="1" eventType="valueChanged" id="7"/>
+                    </connections>
+                </pageControl>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="4" secondAttribute="bottom" constant="10" id="2m6-YE-5Rb"/>
+                <constraint firstAttribute="trailing" secondItem="3" secondAttribute="trailing" id="5FO-co-3gI"/>
+                <constraint firstItem="3" firstAttribute="top" secondItem="1" secondAttribute="top" id="6gJ-lV-z9Z"/>
+                <constraint firstAttribute="bottom" secondItem="3" secondAttribute="bottom" id="K0H-Ni-ACe"/>
+                <constraint firstAttribute="centerX" secondItem="4" secondAttribute="centerX" id="MsF-96-ADF"/>
+                <constraint firstItem="3" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="uKq-hc-nGV"/>
+            </constraints>
+            <connections>
+                <outlet property="backScrollView" destination="3" id="5"/>
+                <outlet property="pageCtl" destination="4" id="6"/>
+            </connections>
+        </view>
+        <tapGestureRecognizer id="xvm-FM-wbV">
+            <connections>
+                <action selector="onScrollViewTaped:" destination="1" id="H6F-Su-q0y"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
